@@ -1,0 +1,26 @@
+{
+  "name": "template_invitation_rustic_floral",
+  "version": "1.0.0",
+  "description": "Template undangan digital daydev dengan tema rustic floral",
+  "scripts": {
+    "build:css": "tailwindcss -i input.css -o assets/css/tailwind.css --minify",
+    "dev:css": "tailwindcss -i input.css -o assets/css/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamdayy/template_invitation_rustic_floral.git"
+  },
+  "keywords": ["wedding", "invitation", "rustic", "floral", "tailwindcss"],
+  "author": "daydev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamdayy/template_invitation_rustic_floral/issues"
+  },
+  "homepage": "https://github.com/iamdayy/template_invitation_rustic_floral#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}
+
