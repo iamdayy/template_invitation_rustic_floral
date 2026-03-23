@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,9 @@
   <!-- Google Fonts (optional: remove if offline) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Tailwind CSS (compiled) -->
   <link rel="stylesheet" href="assets/css/tailwind.css" />
@@ -17,12 +20,13 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body class="bg-cream text-brown-dark overflow-x-hidden">
 
   <!-- ========================================================
        FALLING PETALS CONTAINER
   ======================================================== -->
-  <div id="petals-container" aria-hidden="true"></div>
+  <!-- <div id="petals-container" aria-hidden="true"></div> -->
 
   <!-- ========================================================
        OPENING COVER
@@ -31,50 +35,54 @@
     <!-- Floral corners -->
     <div class="floral-corner floral-top-left" aria-hidden="true">
       <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 10 Q30 60 80 40 Q110 20 70 70 Q40 110 90 100 Q130 90 110 130" stroke="#c8a97e" stroke-width="1.5" fill="none" opacity="0.6"/>
-        <circle cx="85" cy="38" r="12" fill="#d4846f" opacity="0.4"/>
-        <circle cx="55" cy="68" r="8" fill="#c8a97e" opacity="0.35"/>
-        <circle cx="108" cy="52" r="6" fill="#7a9e7e" opacity="0.4"/>
-        <ellipse cx="70" cy="95" rx="10" ry="6" fill="#d4846f" opacity="0.3" transform="rotate(-30 70 95)"/>
+        <path d="M10 10 Q30 60 80 40 Q110 20 70 70 Q40 110 90 100 Q130 90 110 130" stroke="#c8a97e" stroke-width="1.5"
+          fill="none" opacity="0.6" />
+        <circle cx="85" cy="38" r="12" fill="#d4846f" opacity="0.4" />
+        <circle cx="55" cy="68" r="8" fill="#c8a97e" opacity="0.35" />
+        <circle cx="108" cy="52" r="6" fill="#7a9e7e" opacity="0.4" />
+        <ellipse cx="70" cy="95" rx="10" ry="6" fill="#d4846f" opacity="0.3" transform="rotate(-30 70 95)" />
         <!-- Leaves -->
-        <path d="M20 80 Q40 60 60 90" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.5"/>
-        <path d="M15 45 Q35 25 55 50" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.4"/>
-        <path d="M50 110 Q70 90 90 115" stroke="#7a9e7e" stroke-width="1.2" fill="none" opacity="0.4"/>
+        <path d="M20 80 Q40 60 60 90" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.5" />
+        <path d="M15 45 Q35 25 55 50" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.4" />
+        <path d="M50 110 Q70 90 90 115" stroke="#7a9e7e" stroke-width="1.2" fill="none" opacity="0.4" />
         <!-- Small dots -->
-        <circle cx="30" cy="30" r="3" fill="#c4614a" opacity="0.3"/>
-        <circle cx="100" cy="110" r="4" fill="#c8a97e" opacity="0.35"/>
-        <circle cx="45" cy="130" r="3" fill="#d4846f" opacity="0.3"/>
+        <circle cx="30" cy="30" r="3" fill="#c4614a" opacity="0.3" />
+        <circle cx="100" cy="110" r="4" fill="#c8a97e" opacity="0.35" />
+        <circle cx="45" cy="130" r="3" fill="#d4846f" opacity="0.3" />
       </svg>
     </div>
     <div class="floral-corner floral-top-right" aria-hidden="true">
       <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 10 Q30 60 80 40 Q110 20 70 70 Q40 110 90 100 Q130 90 110 130" stroke="#c8a97e" stroke-width="1.5" fill="none" opacity="0.6"/>
-        <circle cx="85" cy="38" r="12" fill="#d4846f" opacity="0.4"/>
-        <circle cx="55" cy="68" r="8" fill="#c8a97e" opacity="0.35"/>
-        <circle cx="108" cy="52" r="6" fill="#7a9e7e" opacity="0.4"/>
-        <ellipse cx="70" cy="95" rx="10" ry="6" fill="#d4846f" opacity="0.3" transform="rotate(-30 70 95)"/>
-        <path d="M20 80 Q40 60 60 90" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.5"/>
-        <path d="M15 45 Q35 25 55 50" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.4"/>
-        <circle cx="30" cy="30" r="3" fill="#c4614a" opacity="0.3"/>
-        <circle cx="100" cy="110" r="4" fill="#c8a97e" opacity="0.35"/>
+        <path d="M10 10 Q30 60 80 40 Q110 20 70 70 Q40 110 90 100 Q130 90 110 130" stroke="#c8a97e" stroke-width="1.5"
+          fill="none" opacity="0.6" />
+        <circle cx="85" cy="38" r="12" fill="#d4846f" opacity="0.4" />
+        <circle cx="55" cy="68" r="8" fill="#c8a97e" opacity="0.35" />
+        <circle cx="108" cy="52" r="6" fill="#7a9e7e" opacity="0.4" />
+        <ellipse cx="70" cy="95" rx="10" ry="6" fill="#d4846f" opacity="0.3" transform="rotate(-30 70 95)" />
+        <path d="M20 80 Q40 60 60 90" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.5" />
+        <path d="M15 45 Q35 25 55 50" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.4" />
+        <circle cx="30" cy="30" r="3" fill="#c4614a" opacity="0.3" />
+        <circle cx="100" cy="110" r="4" fill="#c8a97e" opacity="0.35" />
       </svg>
     </div>
     <div class="floral-corner floral-bottom-left" aria-hidden="true">
       <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 10 Q30 60 80 40 Q110 20 70 70 Q40 110 90 100 Q130 90 110 130" stroke="#c8a97e" stroke-width="1.5" fill="none" opacity="0.5"/>
-        <circle cx="85" cy="38" r="10" fill="#d4846f" opacity="0.35"/>
-        <circle cx="55" cy="68" r="7" fill="#c8a97e" opacity="0.3"/>
-        <path d="M20 80 Q40 60 60 90" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.4"/>
-        <circle cx="30" cy="30" r="3" fill="#c4614a" opacity="0.25"/>
+        <path d="M10 10 Q30 60 80 40 Q110 20 70 70 Q40 110 90 100 Q130 90 110 130" stroke="#c8a97e" stroke-width="1.5"
+          fill="none" opacity="0.5" />
+        <circle cx="85" cy="38" r="10" fill="#d4846f" opacity="0.35" />
+        <circle cx="55" cy="68" r="7" fill="#c8a97e" opacity="0.3" />
+        <path d="M20 80 Q40 60 60 90" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.4" />
+        <circle cx="30" cy="30" r="3" fill="#c4614a" opacity="0.25" />
       </svg>
     </div>
     <div class="floral-corner floral-bottom-right" aria-hidden="true">
       <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 10 Q30 60 80 40 Q110 20 70 70 Q40 110 90 100 Q130 90 110 130" stroke="#c8a97e" stroke-width="1.5" fill="none" opacity="0.5"/>
-        <circle cx="85" cy="38" r="10" fill="#d4846f" opacity="0.35"/>
-        <circle cx="55" cy="68" r="7" fill="#c8a97e" opacity="0.3"/>
-        <path d="M20 80 Q40 60 60 90" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.4"/>
-        <circle cx="30" cy="30" r="3" fill="#c4614a" opacity="0.25"/>
+        <path d="M10 10 Q30 60 80 40 Q110 20 70 70 Q40 110 90 100 Q130 90 110 130" stroke="#c8a97e" stroke-width="1.5"
+          fill="none" opacity="0.5" />
+        <circle cx="85" cy="38" r="10" fill="#d4846f" opacity="0.35" />
+        <circle cx="55" cy="68" r="7" fill="#c8a97e" opacity="0.3" />
+        <path d="M20 80 Q40 60 60 90" stroke="#7a9e7e" stroke-width="1.5" fill="none" opacity="0.4" />
+        <circle cx="30" cy="30" r="3" fill="#c4614a" opacity="0.25" />
       </svg>
     </div>
 
@@ -86,11 +94,11 @@
       <div class="flex items-center justify-center gap-3 mb-5">
         <div class="h-px w-12" style="background:linear-gradient(90deg,transparent,var(--brown-light));"></div>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="12" cy="12" r="3" fill="#c8a97e"/>
-          <circle cx="12" cy="5" r="2" fill="#d4846f" opacity="0.6"/>
-          <circle cx="12" cy="19" r="2" fill="#d4846f" opacity="0.6"/>
-          <circle cx="5" cy="12" r="2" fill="#d4846f" opacity="0.6"/>
-          <circle cx="19" cy="12" r="2" fill="#d4846f" opacity="0.6"/>
+          <circle cx="12" cy="12" r="3" fill="#c8a97e" />
+          <circle cx="12" cy="5" r="2" fill="#d4846f" opacity="0.6" />
+          <circle cx="12" cy="19" r="2" fill="#d4846f" opacity="0.6" />
+          <circle cx="5" cy="12" r="2" fill="#d4846f" opacity="0.6" />
+          <circle cx="19" cy="12" r="2" fill="#d4846f" opacity="0.6" />
         </svg>
         <div class="h-px w-12" style="background:linear-gradient(90deg,var(--brown-light),transparent);"></div>
       </div>
@@ -107,14 +115,11 @@
         Kami mengundang Anda untuk hadir dan memberikan doa restu pada hari istimewa kami.
       </p>
 
-      <button
-        onclick="openInvitation()"
-        class="btn-primary"
-        aria-label="Buka undangan pernikahan"
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-          <circle cx="12" cy="7" r="4"/>
+      <button onclick="openInvitation()" class="btn-primary" aria-label="Buka undangan pernikahan">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
         </svg>
         Buka Undangan
       </button>
@@ -146,34 +151,35 @@
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <!-- Top-left floral cluster -->
       <svg class="absolute top-0 left-0 w-72 sm:w-96 opacity-40" viewBox="0 0 400 400" fill="none">
-        <circle cx="80" cy="60" r="55" fill="#d4846f" opacity="0.25"/>
-        <circle cx="140" cy="90" r="40" fill="#c8a97e" opacity="0.2"/>
-        <circle cx="50" cy="130" r="45" fill="#7a9e7e" opacity="0.2"/>
-        <circle cx="170" cy="50" r="30" fill="#f2cfc0" opacity="0.35"/>
-        <path d="M20 200 Q80 150 150 200 Q200 240 160 280" stroke="#c8a97e" stroke-width="2" fill="none" opacity="0.4"/>
-        <circle cx="160" cy="200" r="18" fill="#d4846f" opacity="0.3"/>
-        <circle cx="100" cy="240" r="14" fill="#c8a97e" opacity="0.25"/>
+        <circle cx="80" cy="60" r="55" fill="#d4846f" opacity="0.25" />
+        <circle cx="140" cy="90" r="40" fill="#c8a97e" opacity="0.2" />
+        <circle cx="50" cy="130" r="45" fill="#7a9e7e" opacity="0.2" />
+        <circle cx="170" cy="50" r="30" fill="#f2cfc0" opacity="0.35" />
+        <path d="M20 200 Q80 150 150 200 Q200 240 160 280" stroke="#c8a97e" stroke-width="2" fill="none"
+          opacity="0.4" />
+        <circle cx="160" cy="200" r="18" fill="#d4846f" opacity="0.3" />
+        <circle cx="100" cy="240" r="14" fill="#c8a97e" opacity="0.25" />
         <!-- leaves -->
-        <path d="M30 80 Q60 40 90 80" stroke="#7a9e7e" stroke-width="2" fill="rgba(122,158,126,0.2)" opacity="0.5"/>
-        <path d="M0 160 Q40 120 70 160" stroke="#4d7a52" stroke-width="1.5" fill="none" opacity="0.4"/>
+        <path d="M30 80 Q60 40 90 80" stroke="#7a9e7e" stroke-width="2" fill="rgba(122,158,126,0.2)" opacity="0.5" />
+        <path d="M0 160 Q40 120 70 160" stroke="#4d7a52" stroke-width="1.5" fill="none" opacity="0.4" />
       </svg>
 
       <!-- Bottom-right floral cluster -->
       <svg class="absolute bottom-0 right-0 w-72 sm:w-96 opacity-40" viewBox="0 0 400 400" fill="none">
-        <circle cx="320" cy="340" r="55" fill="#d4846f" opacity="0.25"/>
-        <circle cx="260" cy="310" r="40" fill="#c8a97e" opacity="0.2"/>
-        <circle cx="350" cy="270" r="45" fill="#7a9e7e" opacity="0.2"/>
-        <circle cx="230" cy="350" r="30" fill="#f2cfc0" opacity="0.35"/>
-        <circle cx="240" cy="200" r="18" fill="#d4846f" opacity="0.3"/>
-        <path d="M310 180 Q350 220 310 260" stroke="#c8a97e" stroke-width="2" fill="none" opacity="0.4"/>
-        <path d="M370 320 Q330 280 360 240" stroke="#7a9e7e" stroke-width="2" fill="none" opacity="0.4"/>
+        <circle cx="320" cy="340" r="55" fill="#d4846f" opacity="0.25" />
+        <circle cx="260" cy="310" r="40" fill="#c8a97e" opacity="0.2" />
+        <circle cx="350" cy="270" r="45" fill="#7a9e7e" opacity="0.2" />
+        <circle cx="230" cy="350" r="30" fill="#f2cfc0" opacity="0.35" />
+        <circle cx="240" cy="200" r="18" fill="#d4846f" opacity="0.3" />
+        <path d="M310 180 Q350 220 310 260" stroke="#c8a97e" stroke-width="2" fill="none" opacity="0.4" />
+        <path d="M370 320 Q330 280 360 240" stroke="#7a9e7e" stroke-width="2" fill="none" opacity="0.4" />
       </svg>
 
       <!-- Top-right small accent -->
       <svg class="absolute top-8 right-8 w-32 opacity-30" viewBox="0 0 150 150" fill="none">
-        <circle cx="75" cy="40" r="22" fill="#d4846f" opacity="0.4"/>
-        <circle cx="110" cy="80" r="16" fill="#c8a97e" opacity="0.35"/>
-        <circle cx="50" cy="100" r="14" fill="#7a9e7e" opacity="0.35"/>
+        <circle cx="75" cy="40" r="22" fill="#d4846f" opacity="0.4" />
+        <circle cx="110" cy="80" r="16" fill="#c8a97e" opacity="0.35" />
+        <circle cx="50" cy="100" r="14" fill="#7a9e7e" opacity="0.35" />
       </svg>
     </div>
 
@@ -186,28 +192,31 @@
       <div class="reveal flex items-center justify-center gap-3 mb-8">
         <div class="h-px w-16 sm:w-24" style="background:linear-gradient(90deg,transparent,var(--brown-light));"></div>
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <circle cx="14" cy="14" r="4" fill="#c8a97e"/>
-          <circle cx="14" cy="5" r="2.5" fill="#d4846f" opacity="0.65"/>
-          <circle cx="14" cy="23" r="2.5" fill="#d4846f" opacity="0.65"/>
-          <circle cx="5" cy="14" r="2.5" fill="#d4846f" opacity="0.65"/>
-          <circle cx="23" cy="14" r="2.5" fill="#d4846f" opacity="0.65"/>
-          <circle cx="7.5" cy="7.5" r="1.8" fill="#7a9e7e" opacity="0.5"/>
-          <circle cx="20.5" cy="7.5" r="1.8" fill="#7a9e7e" opacity="0.5"/>
-          <circle cx="7.5" cy="20.5" r="1.8" fill="#7a9e7e" opacity="0.5"/>
-          <circle cx="20.5" cy="20.5" r="1.8" fill="#7a9e7e" opacity="0.5"/>
+          <circle cx="14" cy="14" r="4" fill="#c8a97e" />
+          <circle cx="14" cy="5" r="2.5" fill="#d4846f" opacity="0.65" />
+          <circle cx="14" cy="23" r="2.5" fill="#d4846f" opacity="0.65" />
+          <circle cx="5" cy="14" r="2.5" fill="#d4846f" opacity="0.65" />
+          <circle cx="23" cy="14" r="2.5" fill="#d4846f" opacity="0.65" />
+          <circle cx="7.5" cy="7.5" r="1.8" fill="#7a9e7e" opacity="0.5" />
+          <circle cx="20.5" cy="7.5" r="1.8" fill="#7a9e7e" opacity="0.5" />
+          <circle cx="7.5" cy="20.5" r="1.8" fill="#7a9e7e" opacity="0.5" />
+          <circle cx="20.5" cy="20.5" r="1.8" fill="#7a9e7e" opacity="0.5" />
         </svg>
         <div class="h-px w-16 sm:w-24" style="background:linear-gradient(90deg,var(--brown-light),transparent);"></div>
       </div>
 
-      <p class="reveal text-sm sm:text-base mb-4 font-light tracking-wide" style="color:var(--text-medium);">Kami yang berbahagia</p>
+      <p class="reveal text-sm sm:text-base mb-4 font-light tracking-wide" style="color:var(--text-medium);">Kami yang
+        berbahagia</p>
 
-      <h2 class="reveal font-script text-7xl sm:text-8xl md:text-9xl leading-none mb-2" style="color:var(--brown-dark);">
+      <h2 class="reveal font-script text-7xl sm:text-8xl md:text-9xl leading-none mb-2"
+        style="color:var(--brown-dark);">
         <span data-groom>Budi Santoso</span>
       </h2>
       <p class="reveal font-display text-xl sm:text-2xl italic my-3" style="color:var(--terracotta-light);">
         &amp;
       </p>
-      <h2 class="reveal font-script text-7xl sm:text-8xl md:text-9xl leading-none mb-8" style="color:var(--terracotta);">
+      <h2 class="reveal font-script text-7xl sm:text-8xl md:text-9xl leading-none mb-8"
+        style="color:var(--terracotta);">
         <span data-bride>Sari Dewi</span>
       </h2>
 
@@ -233,7 +242,8 @@
   ======================================================== -->
   <section class="py-14 bg-rustic-dark" aria-labelledby="countdown-heading">
     <div class="max-w-2xl mx-auto px-4 text-center">
-      <p class="reveal font-display text-sm uppercase tracking-widest mb-6" style="color:var(--text-light);" id="countdown-heading">
+      <p class="reveal font-display text-sm uppercase tracking-widest mb-6" style="color:var(--text-light);"
+        id="countdown-heading">
         Menuju Hari Bahagia
       </p>
       <div class="reveal flex items-start justify-center gap-3 sm:gap-5 flex-wrap">
@@ -274,12 +284,14 @@
       <div class="reveal flex items-center justify-center gap-4 mb-6" aria-hidden="true">
         <div class="h-px flex-1" style="background:linear-gradient(90deg,transparent,var(--brown-light));"></div>
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <path d="M11 2 L13 8 L20 8 L14 12.5 L16 19 L11 15 L6 19 L8 12.5 L2 8 L9 8 Z" fill="#c8a97e" opacity="0.7"/>
+          <path d="M11 2 L13 8 L20 8 L14 12.5 L16 19 L11 15 L6 19 L8 12.5 L2 8 L9 8 Z" fill="#c8a97e" opacity="0.7" />
         </svg>
         <div class="h-px flex-1" style="background:linear-gradient(90deg,var(--brown-light),transparent);"></div>
       </div>
-      <blockquote class="reveal font-display italic text-xl sm:text-2xl leading-relaxed mb-4" style="color:var(--brown-dark);">
-        "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu merasa tenteram kepadanya."
+      <blockquote class="reveal font-display italic text-xl sm:text-2xl leading-relaxed mb-4"
+        style="color:var(--brown-dark);">
+        "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+        agar kamu merasa tenteram kepadanya."
       </blockquote>
       <cite class="reveal text-sm" style="color:var(--text-light);">— QS. Ar-Rum: 21</cite>
     </div>
@@ -293,15 +305,16 @@
     <!-- Subtle watercolor accent -->
     <div class="absolute top-0 right-0 w-64 h-64 pointer-events-none opacity-20" aria-hidden="true">
       <svg viewBox="0 0 200 200" fill="none">
-        <circle cx="150" cy="50" r="70" fill="#c8a97e"/>
-        <circle cx="100" cy="100" r="50" fill="#d4846f"/>
+        <circle cx="150" cy="50" r="70" fill="#c8a97e" />
+        <circle cx="100" cy="100" r="50" fill="#d4846f" />
       </svg>
     </div>
 
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-12">
         <p class="reveal text-xs uppercase tracking-widest mb-2" style="color:var(--text-light);">Rangkaian</p>
-        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);" id="acara-heading">Acara Pernikahan</h2>
+        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);"
+          id="acara-heading">Acara Pernikahan</h2>
         <div class="reveal section-divider mt-4"></div>
       </div>
 
@@ -310,10 +323,12 @@
         <!-- Akad Nikah -->
         <article class="event-card reveal">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(196,97,74,0.12);">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c4614a" stroke-width="1.8" aria-hidden="true">
-                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
-                <circle cx="12" cy="10" r="3"/>
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+              style="background:rgba(196,97,74,0.12);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c4614a" stroke-width="1.8"
+                aria-hidden="true">
+                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
+                <circle cx="12" cy="10" r="3" />
               </svg>
             </div>
             <div>
@@ -324,15 +339,29 @@
 
           <div class="space-y-3 text-sm" style="color:var(--text-medium);">
             <div class="flex items-start gap-3">
-              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
               <span data-akad-date>17 Agustus 2025</span>
             </div>
             <div class="flex items-start gap-3">
-              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
               <span data-akad-time>08.00 – 10.00 WIB</span>
             </div>
             <div class="flex items-start gap-3">
-              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
               <div>
                 <p class="font-semibold" data-akad-venue>Masjid Al-Hikmah</p>
                 <p data-akad-address>Jl. Mawar No. 12, Jakarta Selatan</p>
@@ -342,7 +371,11 @@
 
           <a data-akad-maps href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
             class="btn-secondary mt-6 text-xs" style="width:100%;justify-content:center;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
             Lihat di Google Maps
           </a>
         </article>
@@ -350,12 +383,14 @@
         <!-- Resepsi -->
         <article class="event-card reveal">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(122,158,126,0.12);">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4d7a52" stroke-width="1.8" aria-hidden="true">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+              style="background:rgba(122,158,126,0.12);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4d7a52" stroke-width="1.8"
+                aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg>
             </div>
             <div>
@@ -366,15 +401,29 @@
 
           <div class="space-y-3 text-sm" style="color:var(--text-medium);">
             <div class="flex items-start gap-3">
-              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
               <span data-resepsi-date>17 Agustus 2025</span>
             </div>
             <div class="flex items-start gap-3">
-              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
               <span data-resepsi-time>11.00 – 15.00 WIB</span>
             </div>
             <div class="flex items-start gap-3">
-              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
               <div>
                 <p class="font-semibold" data-resepsi-venue>Taman Bunga Garden Hall</p>
                 <p data-resepsi-address>Jl. Kenanga No. 45, Jakarta Selatan</p>
@@ -384,7 +433,11 @@
 
           <a data-resepsi-maps href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
             class="btn-secondary mt-6 text-xs" style="width:100%;justify-content:center;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
             Lihat di Google Maps
           </a>
         </article>
@@ -398,14 +451,16 @@
           <a id="btn-google-cal" href="#" target="_blank" rel="noopener noreferrer"
             class="calendar-btn calendar-btn-google" aria-label="Tambah ke Google Calendar">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M19.5 3h-15A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3zM12 17.25a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 0 1 0 10.5zm0-1.5a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5z"/>
+              <path
+                d="M19.5 3h-15A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3zM12 17.25a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 0 1 0 10.5zm0-1.5a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5z" />
             </svg>
             Google Calendar
           </a>
-          <a id="btn-apple-cal" href="#" download="wedding-invitation.ics"
-            class="calendar-btn calendar-btn-apple" aria-label="Tambah ke Apple Calendar">
+          <a id="btn-apple-cal" href="#" download="wedding-invitation.ics" class="calendar-btn calendar-btn-apple"
+            aria-label="Tambah ke Apple Calendar">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
             </svg>
             Apple Calendar
           </a>
@@ -421,15 +476,21 @@
   <section class="py-20 bg-rustic" aria-labelledby="story-heading">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <p class="reveal text-xs uppercase tracking-widest mb-2" style="color:var(--text-light);">Tentang Kami</p>
-      <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold mb-4" style="color:var(--brown-dark);" id="story-heading">Kisah Cinta Kami</h2>
+      <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold mb-4" style="color:var(--brown-dark);"
+        id="story-heading">Kisah Cinta Kami</h2>
       <div class="reveal section-divider mb-8"></div>
 
       <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-12 justify-center">
         <!-- Groom -->
         <div class="reveal text-center">
-          <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full mx-auto mb-4 overflow-hidden border-4" style="border-color:var(--brown-light);background:linear-gradient(135deg,var(--cream-dark),var(--brown-light));">
+          <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full mx-auto mb-4 overflow-hidden border-4"
+            style="border-color:var(--brown-light);background:linear-gradient(135deg,var(--cream-dark),var(--brown-light));">
             <div class="w-full h-full flex items-center justify-center" style="color:rgba(255,255,255,0.6);">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
             </div>
           </div>
           <h3 class="font-script text-3xl mb-1" style="color:var(--brown-dark);" data-groom>Budi Santoso</h3>
@@ -441,9 +502,14 @@
 
         <!-- Bride -->
         <div class="reveal text-center">
-          <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full mx-auto mb-4 overflow-hidden border-4" style="border-color:var(--terracotta-light);background:linear-gradient(135deg,#fce8e0,var(--terracotta-light));">
+          <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full mx-auto mb-4 overflow-hidden border-4"
+            style="border-color:var(--terracotta-light);background:linear-gradient(135deg,#fce8e0,var(--terracotta-light));">
             <div class="w-full h-full flex items-center justify-center" style="color:rgba(255,255,255,0.6);">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
             </div>
           </div>
           <h3 class="font-script text-3xl mb-1" style="color:var(--terracotta);" data-bride>Sari Dewi</h3>
@@ -460,7 +526,8 @@
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-10">
         <p class="reveal text-xs uppercase tracking-widest mb-2" style="color:var(--text-light);">Kenangan Bersama</p>
-        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);" id="gallery-heading">Galeri Foto</h2>
+        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);"
+          id="gallery-heading">Galeri Foto</h2>
         <div class="reveal section-divider mt-4"></div>
       </div>
 
@@ -471,16 +538,20 @@
       <div class="reveal flex items-center justify-between mb-4 px-2">
         <button id="gallery-prev"
           class="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-          style="background:rgba(200,169,126,0.2);color:var(--brown-medium);"
-          aria-label="Foto sebelumnya">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          style="background:rgba(200,169,126,0.2);color:var(--brown-medium);" aria-label="Foto sebelumnya">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            aria-hidden="true">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
         </button>
         <span id="gallery-counter" class="text-sm font-medium" style="color:var(--text-light);">1 / 10</span>
         <button id="gallery-next"
           class="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-          style="background:rgba(200,169,126,0.2);color:var(--brown-medium);"
-          aria-label="Foto berikutnya">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          style="background:rgba(200,169,126,0.2);color:var(--brown-medium);" aria-label="Foto berikutnya">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            aria-hidden="true">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </button>
       </div>
 
@@ -496,19 +567,17 @@
     <div class="max-w-3xl mx-auto px-4">
       <div class="text-center mb-10">
         <p class="reveal text-xs uppercase tracking-widest mb-2" style="color:var(--text-light);">Pre-Wedding</p>
-        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);" id="video-heading">Video Teaser</h2>
+        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);"
+          id="video-heading">Video Teaser</h2>
         <div class="reveal section-divider mt-4"></div>
-        <p class="reveal text-sm mt-4" style="color:var(--text-light);">Sepercik kisah cinta kami dalam sebuah video.</p>
+        <p class="reveal text-sm mt-4" style="color:var(--text-light);">Sepercik kisah cinta kami dalam sebuah video.
+        </p>
       </div>
 
       <div class="reveal video-wrapper shadow-2xl" style="border-radius:16px;overflow:hidden;">
-        <iframe
-          id="video-embed"
-          src=""
-          title="Video Pre-Wedding"
+        <iframe id="video-embed" src="" title="Video Pre-Wedding"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
+          allowfullscreen loading="lazy">
         </iframe>
       </div>
     </div>
@@ -521,10 +590,12 @@
     <div class="max-w-3xl mx-auto px-4">
       <div class="text-center mb-10">
         <p class="reveal text-xs uppercase tracking-widest mb-2" style="color:var(--text-light);">Amplop Digital</p>
-        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);" id="gift-heading">Angpao Digital</h2>
+        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);"
+          id="gift-heading">Angpao Digital</h2>
         <div class="reveal section-divider mt-4"></div>
         <p class="reveal text-sm mt-4 max-w-md mx-auto leading-relaxed" style="color:var(--text-light);">
-          Doa dan kehadiran Anda adalah hadiah terbaik bagi kami. Namun jika Anda ingin memberikan hadiah, berikut informasinya:
+          Doa dan kehadiran Anda adalah hadiah terbaik bagi kami. Namun jika Anda ingin memberikan hadiah, berikut
+          informasinya:
         </p>
       </div>
 
@@ -540,23 +611,30 @@
     <!-- Floral accent -->
     <div class="absolute bottom-0 left-0 w-48 opacity-20 pointer-events-none" aria-hidden="true">
       <svg viewBox="0 0 200 200" fill="none">
-        <circle cx="40" cy="160" r="60" fill="#7a9e7e"/>
-        <circle cx="80" cy="120" r="40" fill="#4d7a52"/>
+        <circle cx="40" cy="160" r="60" fill="#7a9e7e" />
+        <circle cx="80" cy="120" r="40" fill="#4d7a52" />
       </svg>
     </div>
 
     <div class="max-w-xl mx-auto px-4 relative z-10">
       <div class="text-center mb-10">
         <p class="reveal text-xs uppercase tracking-widest mb-2" style="color:var(--green-dark);">Konfirmasi</p>
-        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);" id="rsvp-heading">Konfirmasi Kehadiran</h2>
-        <div class="reveal section-divider mt-4" style="background:linear-gradient(90deg,transparent,var(--green-leaf),transparent);"></div>
-        <p class="reveal text-sm mt-4" style="color:var(--text-medium);">Mohon konfirmasi kehadiran Anda paling lambat 7 hari sebelum acara.</p>
+        <h2 class="reveal font-display text-3xl sm:text-4xl font-semibold" style="color:var(--brown-dark);"
+          id="rsvp-heading">Konfirmasi Kehadiran</h2>
+        <div class="reveal section-divider mt-4"
+          style="background:linear-gradient(90deg,transparent,var(--green-leaf),transparent);"></div>
+        <p class="reveal text-sm mt-4" style="color:var(--text-medium);">Mohon konfirmasi kehadiran Anda paling lambat 7
+          hari sebelum acara.</p>
       </div>
 
-      <form id="rsvp-form" class="reveal space-y-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-green-leaf/20 shadow-sm" novalidate>
+      <form id="rsvp-form"
+        class="reveal space-y-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-green-leaf/20 shadow-sm"
+        novalidate>
         <div>
-          <label for="rsvp-name" class="block text-sm font-medium mb-1.5" style="color:var(--text-medium);">Nama Lengkap <span style="color:var(--terracotta);">*</span></label>
-          <input type="text" id="rsvp-name" name="rsvp-name" class="rsvp-input" placeholder="Masukkan nama Anda" required autocomplete="name" />
+          <label for="rsvp-name" class="block text-sm font-medium mb-1.5" style="color:var(--text-medium);">Nama Lengkap
+            <span style="color:var(--terracotta);">*</span></label>
+          <input type="text" id="rsvp-name" name="rsvp-name" class="rsvp-input" placeholder="Masukkan nama Anda"
+            required autocomplete="name" />
         </div>
 
         <div>
@@ -574,7 +652,8 @@
         </div>
 
         <div>
-          <label for="rsvp-guests" class="block text-sm font-medium mb-1.5" style="color:var(--text-medium);">Jumlah Tamu</label>
+          <label for="rsvp-guests" class="block text-sm font-medium mb-1.5" style="color:var(--text-medium);">Jumlah
+            Tamu</label>
           <select id="rsvp-guests" name="rsvp-guests" class="rsvp-input">
             <option value="1">1 orang</option>
             <option value="2">2 orang</option>
@@ -585,12 +664,18 @@
         </div>
 
         <div>
-          <label for="rsvp-message" class="block text-sm font-medium mb-1.5" style="color:var(--text-medium);">Ucapan &amp; Doa (opsional)</label>
-          <textarea id="rsvp-message" name="rsvp-message" rows="3" class="rsvp-input resize-none" placeholder="Tuliskan ucapan dan doa terbaik Anda…"></textarea>
+          <label for="rsvp-message" class="block text-sm font-medium mb-1.5" style="color:var(--text-medium);">Ucapan
+            &amp; Doa (opsional)</label>
+          <textarea id="rsvp-message" name="rsvp-message" rows="3" class="rsvp-input resize-none"
+            placeholder="Tuliskan ucapan dan doa terbaik Anda…"></textarea>
         </div>
 
         <button type="submit" class="btn-primary w-full">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
           Kirim Konfirmasi
         </button>
       </form>
@@ -605,14 +690,14 @@
     <!-- Floral bottom decoration -->
     <div class="absolute bottom-0 left-0 right-0 flex justify-between pointer-events-none" aria-hidden="true">
       <svg class="w-40 opacity-30" viewBox="0 0 180 120" fill="none">
-        <circle cx="30" cy="120" r="60" fill="#c8a97e"/>
-        <circle cx="80" cy="100" r="40" fill="#d4846f"/>
-        <circle cx="10" cy="80" r="30" fill="#7a9e7e"/>
+        <circle cx="30" cy="120" r="60" fill="#c8a97e" />
+        <circle cx="80" cy="100" r="40" fill="#d4846f" />
+        <circle cx="10" cy="80" r="30" fill="#7a9e7e" />
       </svg>
       <svg class="w-40 opacity-30" viewBox="0 0 180 120" fill="none">
-        <circle cx="150" cy="120" r="60" fill="#c8a97e"/>
-        <circle cx="100" cy="100" r="40" fill="#d4846f"/>
-        <circle cx="170" cy="80" r="30" fill="#7a9e7e"/>
+        <circle cx="150" cy="120" r="60" fill="#c8a97e" />
+        <circle cx="100" cy="100" r="40" fill="#d4846f" />
+        <circle cx="170" cy="80" r="30" fill="#7a9e7e" />
       </svg>
     </div>
 
@@ -621,7 +706,7 @@
       <div class="reveal flex items-center justify-center gap-3 mb-6" aria-hidden="true">
         <div class="h-px w-12" style="background:linear-gradient(90deg,transparent,var(--brown-light));"></div>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 1.5 L12 7 L18 7 L13 11 L15 17 L10 13.5 L5 17 L7 11 L2 7 L8 7 Z" fill="#c8a97e" opacity="0.8"/>
+          <path d="M10 1.5 L12 7 L18 7 L13 11 L15 17 L10 13.5 L5 17 L7 11 L2 7 L8 7 Z" fill="#c8a97e" opacity="0.8" />
         </svg>
         <div class="h-px w-12" style="background:linear-gradient(90deg,var(--brown-light),transparent);"></div>
       </div>
@@ -635,7 +720,8 @@
       </p>
 
       <p class="reveal text-sm max-w-sm mx-auto leading-relaxed mb-8" style="color:var(--text-light);">
-        Merupakan suatu kehormatan dan kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kami.
+        Merupakan suatu kehormatan dan kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu
+        kepada kami.
       </p>
 
       <div class="reveal flex items-center justify-center gap-3 mb-6" aria-hidden="true">
@@ -654,9 +740,13 @@
        LIGHTBOX
   ======================================================== -->
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto penuh">
-    <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
-      aria-label="Tutup lightbox">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <button onclick="closeLightbox()"
+      class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10" aria-label="Tutup lightbox">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
     </button>
     <img id="lightbox-img" src="" alt="" />
   </div>
@@ -669,4 +759,5 @@
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

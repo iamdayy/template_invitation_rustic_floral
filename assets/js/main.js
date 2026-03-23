@@ -268,11 +268,11 @@ function goToSlide(index) {
   thumbs[currentSlide].classList.add("active");
 
   // Scroll thumb into view
-  thumbs[currentSlide].scrollIntoView({
-    behavior: "smooth",
-    block: "nearest",
-    inline: "center",
-  });
+  // thumbs[currentSlide].scrollIntoView({
+  //   behavior: "smooth",
+  //   block: "nearest",
+  //   inline: "center",
+  // });
 
   updateGalleryNav();
 }
