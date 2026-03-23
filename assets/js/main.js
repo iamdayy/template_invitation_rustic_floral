@@ -327,20 +327,31 @@ function initLightbox() {
 }
 
 /* =================== COPY TO CLIPBOARD =================== */
-function copyText(text) {
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(() => showToast("Disalin! ✓"));
-  } else {
-    // Fallback
-    const el = document.createElement("textarea");
-    el.value = text;
-    el.style.position = "fixed";
-    el.style.opacity = "0";
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand("copy");
-    document.body.removeChild(el);
+function fallbackCopyText(text) {
+  const el = document.createElement("textarea");
+  el.value = text;
+  el.style.position = "fixed";
+  el.style.opacity = "0";
+  document.body.appendChild(el);
+  el.select();
+  const copied = document.execCommand("copy");
+  document.body.removeChild(el);
+
+  if (copied) {
     showToast("Disalin! ✓");
+  } else {
+    showToast("Gagal menyalin. Silakan salin manual.");
+  }
+}
+
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => showToast("Disalin! ✓"))
+      .catch(() => fallbackCopyText(text));
+  } else {
+    fallbackCopyText(text);
   }
 }
 
@@ -375,7 +386,7 @@ function renderGift() {
         </div>
         <p class="text-2xl font-bold tracking-widest mb-1" style="color:var(--brown-dark);font-family:'Playfair Display',serif;">${item.account}</p>
         <p class="text-sm mb-4" style="color:var(--text-light);">a.n. ${item.name}</p>
-        <button class="copy-btn" onclick="copyText('${item.account}')">
+        <button class="copy-btn" type="button">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
           Salin Nomor
         </button>
@@ -393,11 +404,16 @@ function renderGift() {
         }
         <p class="text-xl font-bold tracking-wide mb-1" style="color:var(--brown-dark);">${item.account}</p>
         <p class="text-sm mb-4" style="color:var(--text-light);">a.n. ${item.name}</p>
-        <button class="copy-btn" onclick="copyText('${item.account}')">
+        <button class="copy-btn" type="button">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
           Salin Nomor
         </button>
       `;
+    }
+
+    const copyBtn = card.querySelector(".copy-btn");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => copyText(item.account));
     }
 
     container.appendChild(card);
@@ -405,6 +421,8 @@ function renderGift() {
 }
 
 /* =================== ADD TO CALENDAR =================== */
+let calendarIcsUrl = null;
+
 function buildCalendarLinks() {
   const start = new Date(CONFIG.weddingDate);
   const end = new Date(start.getTime() + 7 * 60 * 60 * 1000); // +7 hours
@@ -439,14 +457,17 @@ function buildCalendarLinks() {
   ].join("\r\n");
 
   const icsBlob = new Blob([icsContent], { type: "text/calendar" });
-  const icsUrl = URL.createObjectURL(icsBlob);
+  if (calendarIcsUrl) {
+    URL.revokeObjectURL(calendarIcsUrl);
+  }
+  calendarIcsUrl = URL.createObjectURL(icsBlob);
 
   const googleBtn = document.getElementById("btn-google-cal");
   const appleBtn = document.getElementById("btn-apple-cal");
 
   if (googleBtn) googleBtn.href = googleUrl;
   if (appleBtn) {
-    appleBtn.href = icsUrl;
+    appleBtn.href = calendarIcsUrl;
     appleBtn.download = "wedding-invitation.ics";
   }
 }
@@ -565,4 +586,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initRsvp();
   initReveal();
   initSmoothScroll();
+
+  window.addEventListener("beforeunload", () => {
+    if (calendarIcsUrl) {
+      URL.revokeObjectURL(calendarIcsUrl);
+      calendarIcsUrl = null;
+    }
+  });
 });
